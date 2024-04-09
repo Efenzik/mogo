@@ -1,0 +1,167 @@
+:root {
+  --colorTextPrimary: #333;
+  --colorTextSecondary: #b6b6b6;
+  --colorTextTertiary: #95e1d3;
+  --colorHover: #f38181;
+  --colorTextButton: #fff;
+  /*Шрифти*/
+  --fontTextPrimary: "Montserrat", sans-serif;
+  --fontTextSecondary: "Roboto", sans-serif;
+}
+/*=======================GLOBAL=========================================*/
+body {
+  font-family: var(--fontTextPrimary);
+  color: var(--fontColorPrimary);
+  font-size: 14px;
+  font-weight: 400;
+}
+.container {
+  max-width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  width: 100%;
+  display: block;
+}
+/*=======================HEADER=========================================*/
+.header {
+  padding-top: 17px;
+  padding-bottom: 80px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  color: var(--colorTextTertiary);
+  font-size: 30px;
+  font-weight: 700;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+.nav-link {
+  color: var(--colorTextTertiary);
+}
+.nav-link:hover {
+  color: var(--colorHover);
+}
+/*========================SERVICES===============================================*/
+.services {
+  padding-bottom: 100px;
+}
+.services-title {
+  font-size: 30px;
+  font-weight: 700;
+  font-variant: all-small-caps;
+  text-align: center;
+  margin-bottom: 65px;
+}
+.service-title {
+  font-variant: small-caps;
+}
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 100px;
+  justify-content: space-between;
+}
+.service {
+  max-width: 330px;
+  flex-basis: calc((100% - 140px) / 3);
+}
+.service-heading {
+  display: flex;
+  gap: 20px;
+}
+.service-text {
+  color: var(--colorTextSecondary);
+  font-family: var(--fontTextSecondary);
+  font-size: 15px;
+  line-height: 1.47; /* 146.667% */
+  padding-left: 57px;
+}
+/*========================TEAM===============================================*/
+.team {
+  padding-bottom: 80px;
+}
+.team-title {
+  font-size: 30px;
+  font-weight: 700;
+  font-variant: all-small-caps;
+  text-align: center;
+  margin-bottom: 45px;
+}
+.team-text {
+  color: var(--colorTextSecondary);
+  text-align: center;
+  font-family: var(--fontTextSecondary);
+  font-size: 15px;
+  margin-bottom: 27px;
+}
+.team-members {
+  display: flex;
+  gap: 30px;
+}
+.teammete {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.teammete-photo {
+  margin-bottom: 30px;
+}
+.teammete-name {
+  font-variant: all-small-caps;
+  text-align: center;
+  margin-bottom: 11px;
+}
+.teammete-role {
+  color: var(--colorTextSecondary);
+  text-align: center;
+  font-family: var(--fontTextSecondary);
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+}
+/*========================FOOTER===============================================*/
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-info {
+  color: var(--colorHover);
+}
+.subscribe {
+  display: flex;
+}
+.subscribe-mail {
+  padding: 12px 10px;
+}
+.subscribe-mail::placeholder {
+  color: var(--colorTextSecondary);
+  font-family: var(--fontTextSecondary);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+}
+.subscribe-button {
+  color: var(--colorTextButton);
+  text-align: center;
+  font-family: var(--fontTextPrimary);
+  font-size: 14px;
+  font-weight: 700;
+  font-variant: all-small-caps;
+  padding: 12px 38px;
+  background-color: var(--colorTextTertiary);
+}
