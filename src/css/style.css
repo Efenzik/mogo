@@ -1,167 +1,251 @@
 :root {
-  --colorTextPrimary: #333;
-  --colorTextSecondary: #b6b6b6;
-  --colorTextTertiary: #95e1d3;
+  --fontFamily: "Montserrat", sans-serif;
+  --secondFamily: "Roboto", sans-serif;
+  --thirtyFamily: "Kaushan Script", cursive;
   --colorHover: #f38181;
-  --colorTextButton: #fff;
-  /*Шрифти*/
-  --fontTextPrimary: "Montserrat", sans-serif;
-  --fontTextSecondary: "Roboto", sans-serif;
+  --colorBackground: #fff;
+  --colorHeader: #95e1d3;
+  --colorTitle: #333333;
+  --colorText: #b6b6b6;
 }
-/*=======================GLOBAL=========================================*/
+
+span {
+  color: var(--colorHover);
+}
+
 body {
-  font-family: var(--fontTextPrimary);
-  color: var(--fontColorPrimary);
+  font-family: var(--fontFamily);
   font-size: 14px;
   font-weight: 400;
+  line-height: 1.47;
 }
+
 .container {
   max-width: 1230px;
-  padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 15px;
+  margin: 0 auto;
 }
+
 img {
   width: 100%;
   display: block;
 }
-/*=======================HEADER=========================================*/
+
+/* ===================header===================== */
+
 .header {
   padding-top: 17px;
   padding-bottom: 80px;
+  height: 45px;
 }
-.header-container {
+
+.container-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo-text {
-  color: var(--colorTextTertiary);
-  font-size: 30px;
-  font-weight: 700;
-}
 .nav-list {
   display: flex;
-  align-items: center;
-  gap: 55px;
+  justify-content: space-between;
+  column-gap: 55px;
 }
+
+.logo {
+  text-decoration: none;
+}
+
+.logo-text {
+  color: var(--colorHeader);
+  font-weight: 700;
+  font-size: 30px;
+}
+
 .nav-link {
-  color: var(--colorTextTertiary);
+  color: var(--colorHeader);
+  font-weight: 400;
+  text-decoration: underline;
 }
 .nav-link:hover {
-  color: var(--colorHover);
+  color: #f38181;
 }
-/*========================SERVICES===============================================*/
+
+/* ===================main===================== */
+
 .services {
   padding-bottom: 100px;
 }
-.services-title {
-  font-size: 30px;
-  font-weight: 700;
-  font-variant: all-small-caps;
-  text-align: center;
+
+.supline {
+  width: 60px;
+  height: 4px;
+  background-color: var(--colorHover);
+  margin: 0 auto;
   margin-bottom: 65px;
 }
-.service-title {
-  font-variant: small-caps;
+
+.services-subtitle {
+  font-family: var(--thirtyFamily);
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
 }
-.services-cards {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 100px;
-  justify-content: space-between;
-}
+
 .service {
-  max-width: 330px;
   flex-basis: calc((100% - 140px) / 3);
 }
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 100px;
+}
+
+.services-title {
+  font-weight: 700;
+  font-size: 30px;
+  font-variant: all-small-caps;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .service-heading {
   display: flex;
   gap: 20px;
 }
+
+.service-title {
+  font-weight: 400;
+  font-size: 14px;
+  font-variant: small-caps;
+  padding-bottom: 20px;
+}
+
 .service-text {
-  color: var(--colorTextSecondary);
-  font-family: var(--fontTextSecondary);
+  font-family: var(--secondFamily);
+  color: var(--colorText);
+  font-weight: 400;
   font-size: 15px;
-  line-height: 1.47; /* 146.667% */
+  line-height: 1.47;
   padding-left: 57px;
 }
-/*========================TEAM===============================================*/
+
+.team-subtitle {
+  font-family: var(--thirtyFamily);
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+}
+
 .team {
   padding-bottom: 80px;
 }
-.team-title {
-  font-size: 30px;
-  font-weight: 700;
-  font-variant: all-small-caps;
-  text-align: center;
-  margin-bottom: 45px;
-}
-.team-text {
-  color: var(--colorTextSecondary);
-  text-align: center;
-  font-family: var(--fontTextSecondary);
-  font-size: 15px;
-  margin-bottom: 27px;
-}
+
 .team-members {
   display: flex;
-  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
 }
-.teammete {
+
+.teammate-photo {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.teammate-photo {
+  width: 100%;
+}
+
+.teammate-photo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(
+    to left bottom,
+    rgba(106, 202, 93, 0.435),
+    #4969818c
+  );
+  top: 10px;
+  left: 10px;
+}
+
+.teammate {
   flex-basis: calc((100% - 60px) / 3);
 }
-.teammete-photo {
-  margin-bottom: 30px;
+
+.team-title {
+  font-weight: 700;
+  font-size: 30px;
+  font-variant: all-small-caps;
+  text-align: center;
+  margin-bottom: 36px;
 }
-.teammete-name {
+
+.team-text {
+  font-family: var(--secondFamily);
+  color: var(--colorText);
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+.teammate-name {
+  font-weight: 400;
+  font-size: 14px;
   font-variant: all-small-caps;
   text-align: center;
   margin-bottom: 11px;
 }
-.teammete-role {
-  color: var(--colorTextSecondary);
-  text-align: center;
-  font-family: var(--fontTextSecondary);
-  font-size: 15px;
+
+.teammate-role {
   font-style: italic;
   font-weight: 300;
+  font-size: 15px;
+  text-align: center;
 }
-/*========================FOOTER===============================================*/
+
+/* ======================footer======================== */
+
 .footer {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 70px;
+  height: 50px;
 }
+
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #b6b6b6;
 }
-.footer-info {
-  color: var(--colorHover);
+
+.footer-text {
+  font-weight: 400;
+  font-size: 14px;
 }
-.subscribe {
+
+.footer-form {
   display: flex;
 }
-.subscribe-mail {
+
+.form-input {
+  width: 230px;
+  height: 39px;
+  border: 1px solid var(--colorText);
   padding: 12px 10px;
 }
-.subscribe-mail::placeholder {
-  color: var(--colorTextSecondary);
-  font-family: var(--fontTextSecondary);
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 300;
-}
-.subscribe-button {
-  color: var(--colorTextButton);
-  text-align: center;
-  font-family: var(--fontTextPrimary);
-  font-size: 14px;
+
+.form-button {
+  background-color: var(--colorHeader);
+  color: var(--colorBackground);
   font-weight: 700;
+  font-size: 14px;
   font-variant: all-small-caps;
   padding: 12px 38px;
-  background-color: var(--colorTextTertiary);
 }
